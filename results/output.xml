@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.3 on win32)" generated="2024-05-31T13:44:26.348998" rpa="false" schemaversion="5">
+<suite id="s1" name="TPRobotFramework" source="C:\Users\Administrateur\Desktop\TPRobotFramework">
+<suite id="s1-s1" name="Sauce demo" source="C:\Users\Administrateur\Desktop\TPRobotFramework\Sauce_demo">
+<suite id="s1-s1-s1" name="Testcase sauce demo" source="C:\Users\Administrateur\Desktop\TPRobotFramework\Sauce_demo\Testcase_sauce_demo.robot">
+<test id="s1-s1-s1-t1" name="Test cas numéro 5" line="50">
+<kw name="Given Im on the logpage" owner="Keywords_sauce_demo">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-05-31T13:44:26.517992" level="INFO">Opening browser 'firefox' to base url 'https://www.saucedemo.com/'.</msg>
+<arg>${setUrl}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-05-31T13:44:26.517601" elapsed="5.280236"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-05-31T13:44:31.797837" elapsed="0.280590"/>
+</kw>
+<arg>${url}</arg>
+<status status="PASS" start="2024-05-31T13:44:26.516632" elapsed="5.561795"/>
+</kw>
+<kw name="When Im connected Im on the inventory page" owner="Keywords_sauce_demo">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-31T13:44:32.078427" level="INFO">Typing text 'standard_user' into text field '//input[@id="user-name"]'.</msg>
+<arg>//input[@id="user-name"]</arg>
+<arg>${setUser}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-31T13:44:32.078427" elapsed="0.059451"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-05-31T13:44:32.137878" level="INFO">Typing password into text field '//input[@id="password"]'.</msg>
+<msg time="2024-05-31T13:44:32.147888" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>//input[@id="password"]</arg>
+<arg>${setPassword}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-31T13:44:32.137878" elapsed="0.010010"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-05-31T13:44:32.147888" level="INFO">Clicking button '//input[@id="login-button"]'.</msg>
+<arg>//input[@id="login-button"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-31T13:44:32.147888" elapsed="0.244904"/>
+</kw>
+<arg>${standardUser}</arg>
+<arg>${mdp}</arg>
+<status status="PASS" start="2024-05-31T13:44:32.078427" elapsed="0.314365"/>
+</kw>
+<kw name="Then I can go the second item, see the details page of the product and add it to the cart" owner="Keywords_sauce_demo">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-31T13:44:32.392792" level="INFO">Clicking element '(//*[@class="inventory_item_name "])[2]'.</msg>
+<arg>(//*[@class="inventory_item_name "])[${setItem}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-31T13:44:32.392792" elapsed="0.216792"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-31T13:44:32.609584" level="INFO">Clicking element '//button[@id="add-to-cart"]'.</msg>
+<arg>//button[@id="add-to-cart"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-31T13:44:32.609584" elapsed="0.219994"/>
+</kw>
+<arg>${selectItem}</arg>
+<status status="PASS" start="2024-05-31T13:44:32.392792" elapsed="0.436786"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-31T13:44:32.832097" level="INFO">Verifying element '//div[contains(@class, "inventory_details_name large_size")]' contains exact text 'Sauce Labs Bike Light'.</msg>
+<arg>//div[contains(@class, "inventory_details_name large_size")]</arg>
+<arg>${title}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-05-31T13:44:32.832097" elapsed="0.009852"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-31T13:44:32.841949" level="INFO">Verifying element '//div[contains(@class, "inventory_details_price")]' contains exact text '$9.99'.</msg>
+<arg>//div[contains(@class, "inventory_details_price")]</arg>
+<arg>${price}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-05-31T13:44:32.841949" elapsed="0.007898"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-31T13:44:32.850846" level="INFO">Verifying element '//div[contains(@class, "inventory_details_desc large_size")]' contains exact text 'A red light isn't the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included.'.</msg>
+<arg>//div[contains(@class, "inventory_details_desc large_size")]</arg>
+<arg>${descritpion}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-05-31T13:44:32.849847" elapsed="0.008676"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-05-31T13:44:32.867669" level="INFO">Element '//div[contains(@class, "inventory_details_img")]' is displayed.</msg>
+<arg>//div[contains(@class, "inventory_details_img")]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-31T13:44:32.858523" elapsed="0.009146"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-31T13:44:32.868594" level="INFO">Verifying element '//*[@class="shopping_cart_badge"]' contains exact text '1'.</msg>
+<arg>//*[@class="shopping_cart_badge"]</arg>
+<arg>${elementInCart}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-05-31T13:44:32.868343" elapsed="0.006932"/>
+</kw>
+<kw name="Then I can go to the cart" owner="Keywords_sauce_demo">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-31T13:44:32.876272" level="INFO">Clicking element '//*[@id="shopping_cart_container"]'.</msg>
+<arg>//*[@id="shopping_cart_container"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-31T13:44:32.876272" elapsed="0.217814"/>
+</kw>
+<status status="PASS" start="2024-05-31T13:44:32.876272" elapsed="0.217814"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-05-31T13:44:33.094086" level="INFO">Verifying element '//div[@class="cart_quantity"]' contains exact text '1'.</msg>
+<arg>//div[@class="cart_quantity"]</arg>
+<arg>${elementInCart}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-05-31T13:44:33.094086" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-05-31T13:44:26.515604" elapsed="6.578482"/>
+</test>
+<status status="PASS" start="2024-05-31T13:44:26.369035" elapsed="6.725051"/>
+</suite>
+<status status="PASS" start="2024-05-31T13:44:26.366327" elapsed="6.741782"/>
+</suite>
+<status status="PASS" start="2024-05-31T13:44:26.351990" elapsed="6.757117"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="TPRobotFramework">TPRobotFramework</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Sauce demo">TPRobotFramework.Sauce demo</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Testcase sauce demo">TPRobotFramework.Sauce demo.Testcase sauce demo</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
